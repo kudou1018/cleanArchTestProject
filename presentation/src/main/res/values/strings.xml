@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Weather Test App</string>
+    <string name="weather_max">最高気温 %d ℃</string>
+    <string name="weather_min">最低気温 %d ℃</string>
+    <string name="weather_title">%S の 天気</string>
+    <string name="error">エラー</string>
+    <string name="none">none</string>
+
+    <string-array name="japan">
+        <item>Hokkaido</item>
+        <item>Aomori</item>
+        <item>Iwate</item>
+        <item>Miyagi</item>
+        <item>Akita</item>
+        <item>Yamagata</item>
+        <item>Fukushima</item>
+        <item>Ibaraki</item>
+        <item>Tochigi</item>
+        <item>Gunma</item>
+        <item>Saitama</item>
+        <item>Chiba</item>
+        <item>Tokyo</item>
+        <item>Kanagawa</item>
+        <item>Kyoto</item>
+        <item>Osaka</item>
+        <item>Okinawa</item>
+    </string-array>
+
+    <string-array name="japan_ui">
+        <item>北海道</item>
+        <item>青森県</item>
+        <item>岩手県</item>
+        <item>宮城県</item>
+        <item>秋田県</item>
+        <item>山形県</item>
+        <item>福島県</item>
+        <item>茨城県</item>
+        <item>栃木県</item>
+        <item>群馬県</item>
+        <item>埼玉県</item>
+        <item>千葉県</item>
+        <item>東京都</item>
+        <item>神奈川県</item>
+        <item>京都府</item>
+        <item>大阪府</item>
+        <item>沖縄県</item>
+    </string-array>
+</resources>

@@ -1,0 +1,69 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package presentation {
+ class AndroidApplication
+ package view {
+  class MainActivity
+  interface WeatherDisplayView
+  class WeatherFragment
+ }
+ package mapper {
+   class WeahterModelDataMapper
+ }
+ package presenter {
+   class WeatherFragmentPresenter {
+       -WeatherModelDataMapper mapper;
+       -WeatherDisplayView mView;
+ }
+ }
+ package model{
+    class WeatherModel
+ }
+ package di{
+    class Module
+ }
+}
+package domain{
+    class WeatherData
+    interface UseCaseResultListener
+    class GetCurrentWeatherData
+    package repository {
+      interface WeatherRepository
+    }
+}
+
+package data {
+  package net {
+    class WeatherApi
+    interface WeatherApiInterface
+  }
+  package repositry {
+    class WeatherGetRepository
+  }
+  package entitiy {
+    class WeatherEntity
+    class WeatherDataMapper
+  }
+}
+MainActivity --> WeatherFragment
+WeatherFragment ---|> WeatherDisplayView
+WeatherFragment ---> WeatherModel
+WeatherFragmentPresenter -----|> UseCaseResultListener
+WeatherFragmentPresenter --> WeatherDisplayView
+WeatherFragmentPresenter --> WeahterModelDataMapper
+WeatherFragmentPresenter ------> GetCurrentWeatherData
+WeahterModelDataMapper --> WeatherModel
+GetCurrentWeatherData --> UseCaseResultListener
+GetCurrentWeatherData --> WeatherRepository
+GetCurrentWeatherData --> WeatherData
+WeatherGetRepository ----|> WeatherRepository
+WeatherGetRepository --> WeatherApi
+WeatherGetRepository --> WeatherApiInterface
+WeatherGetRepository --> WeatherEntity
+WeatherGetRepository --> WeatherDataMapper
+WeatherDataMapper -> WeatherEntity
+WeatherDataMapper ---> WeatherData
+WeatherDataMapper --> WeatherApi
+
+@enduml
